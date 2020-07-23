@@ -7,6 +7,18 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
 </p>
 
+## Тестовое задание
+##### "Уменьшитель URL"
+- Пользователю предоставляется поле для ввода URL, 
+по нажатию кнопки "Уменьшить" предоставляется уникальная короткая ссылка с текущим доменом сайта (Например, http://localhost/aBcD).
+- При переходе по уменьшенной ссылке юзер будет перенаправлен на исходную страницу.
+- Пользователь должен иметь возможность создать свою уникальную короткую ссылку.
+- Должна быть возможность создавать ссылки с ограниченным сроком жизни.
+
+Требование: решить поставленную задачу используя: · PHP 7+ · ООП · Laravel
+
+## Развертывание
+
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:

@@ -1,0 +1,51 @@
+version: '3'
+
+services:
+
+  nginx:
+    build: ./.build/docker/nginx
+    restart: always
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./:/app
+      - ./.build/docker/nginx/nginx/:/etc/nginx/
+    depends_on:
+      - php
+    networks:
+      - internal
+
+  php:
+    build: ./.build/docker/php
+    volumes:
+      - ./:/app
+    depends_on:
+      - postgres
+    networks:
+      - internal
+
+  postgres:
+    image: postgres:12
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    environment:
+      TZ: Europe/Moscow
+      POSTGRES_PASSWORD: bgs
+      POSTGRES_USER: bgs
+      POSTGRES_DB: bgs
+    networks:
+      - internal
+
+volumes:
+  pgdata:
+
+networks:
+  internal:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 192.168.220.0/29
