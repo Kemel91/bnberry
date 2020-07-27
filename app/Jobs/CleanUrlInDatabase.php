@@ -30,6 +30,6 @@ class CleanUrlInDatabase implements ShouldQueue
      */
     public function handle()
     {
-        Url::query()->where('date_delete', '<', Carbon::now())->delete();
+        Url::query()->whereNotNull('date_delete')->where('date_delete', '<', Carbon::now())->delete();
     }
 }
