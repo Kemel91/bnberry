@@ -2,7 +2,7 @@
 
 set -euo pipefail
 
-cp .build/.env .env
+cp .build/.env.example .env
 
 docker-compose up -d --build
 docker-compose run -T --rm php composer install
