@@ -1,0 +1,6 @@
+<OTA_HotelAvailNotifRS Version="1.0"
+                       TimeStamp="{{time}}"
+                       EchoToken="001-1466531393"
+                       xmlns="http://www.opentravel.org/OTA/2003/05">
+    <Success />
+</OTA_HotelAvailNotifRS>
