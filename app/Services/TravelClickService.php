@@ -6,6 +6,7 @@ class TravelClickService
 {
     public function ping(array $data): array
     {
+        $data['@attributes']['xmlns'] = 'http://www.opentravel.org/OTA/2003/05';
         $data['Success'] = null;
         return $data;
     }
@@ -14,7 +15,7 @@ class TravelClickService
     {
         $data['Success'] = null;
         unset($data['POS']);
-        //dd($data);
+        $data['@attributes']['xmlns'] = 'http://www.opentravel.org/OTA/2003/05';
         return $data;
     }
 }
