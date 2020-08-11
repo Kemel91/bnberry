@@ -12,8 +12,9 @@ class TravelClickService
 
     public function hotelProductRQ(array $data)
     {
-        //dd($data);
         $data['Success'] = null;
+        unset($data['POS']);
+        //dd($data);
         return $data;
     }
 }
