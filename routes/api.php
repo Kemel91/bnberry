@@ -19,11 +19,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 $service = new \App\Services\XmlService();
 
-Route::post('/travelclick', function () use ($service) {
-
-    return $service->setContents('ping')->response();
-});
-Route::post('/travelclick/hotel-product-rq', function (Request $request) use ($service) {
-    var_dump($request->all());
-    return $service->setContents('hotel-product-rq')->response();
+Route::middleware('xml')->prefix('travelclick')->group(function () {
+    Route::post('/', 'TravelClickController@ping');
+    Route::post('/hotel-product-rq', 'TravelClickController@hotelProductRQ');
 });
