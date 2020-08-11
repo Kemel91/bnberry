@@ -23,6 +23,7 @@ Route::post('/travelclick', function () use ($service) {
 
     return $service->setContents('ping')->response();
 });
-Route::post('/travelclick/hotel-product-rq', function () use ($service){
+Route::post('/travelclick/hotel-product-rq', function (Request $request) use ($service) {
+    var_dump($request->all());
     return $service->setContents('hotel-product-rq')->response();
 });
