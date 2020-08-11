@@ -10,7 +10,7 @@ class TravelClickController extends Controller
     private $service;
 
     private const RESPONSE_HEAD = [
-        'ping' => 'OTA_PINGRS',
+        'ping' => 'OTA_PingRS',
         'hotelProductRQ' => 'OTA_HotelProductRQ'
     ];
 
