@@ -18,7 +18,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/travelclick', function () {
+Route::post('/travelclick', function () {
     $service= new \App\Services\XmlService();
     return $service->setContents('ping')->response();
 });
