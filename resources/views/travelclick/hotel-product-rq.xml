@@ -1,0 +1,26 @@
+<OTA_HotelProductRS Version="1.0"
+                    TimeStamp="{{time}}"
+                    EchoToken="001-1466531393"
+                    xmlns="http://www.opentravel.org/OTA/2003/05">
+    <Success />
+    <HotelProducts HotelCode="HOTEL001">
+        <HotelProduct>
+            <RatePlans>
+                <RatePlan RatePlanCode="BAR" RatePlanName="Best Available Rate" BaseOccupancy="2" CurrencyCode="USD" />
+                <RatePlan RatePlanCode="LM" RatePlanName="Last Minute Rate" BaseOccupancy="2" CurrencyCode="USD" />
+            </RatePlans>
+            <RoomTypes>
+                <RoomType RoomTypeCode="STANDARD" RoomTypeName="Standard Room" MaxAdultOccupancy="4" />
+                <RoomType RoomTypeCode="DBL" RoomTypeName="Double Room" MaxAdultOccupancy="4" />
+            </RoomTypes>
+        </HotelProduct>
+        <HotelProduct>
+            <RatePlans>
+                <RatePlan RatePlanCode="ADV" RatePlanName="Advanced Purchase" BaseOccupancy="2" CurrencyCode="USD" />
+            </RatePlans>
+            <RoomTypes>
+                <RoomType RoomTypeCode="DLX" RoomTypeName="Deluxe Room" MaxAdultOccupancy="4" MaxChildOccupancy="2" MaxInfantOccupancy="2" />
+            </RoomTypes>
+        </HotelProduct>
+    </HotelProducts>
+</OTA_HotelProductRS>

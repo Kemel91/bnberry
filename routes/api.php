@@ -17,10 +17,12 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+$service = new \App\Services\XmlService();
 
-Route::post('/travelclick', function () {
-    $post = request()->all();
-    var_dump($post);
-    $service= new \App\Services\XmlService();
+Route::post('/travelclick', function () use ($service) {
+
     return $service->setContents('ping')->response();
+});
+Route::post('/travelclick/hotel-product-rq', function () use ($service){
+    return $service->setContents('hotel-product-iq')->response();
 });
