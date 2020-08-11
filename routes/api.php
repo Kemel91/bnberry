@@ -24,5 +24,5 @@ Route::post('/travelclick', function () use ($service) {
     return $service->setContents('ping')->response();
 });
 Route::post('/travelclick/hotel-product-rq', function () use ($service){
-    return $service->setContents('hotel-product-iq')->response();
+    return $service->setContents('hotel-product-rq')->response();
 });
