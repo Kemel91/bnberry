@@ -22,7 +22,7 @@ Route::post('/travelclick', function () {
     $post = request()->post();
     if (count($post) > 0) {
         $text = implode(',', array_keys($post)) . ' - ' . implode(',', array_values($post));
-        file_put_contents(base_path('post.txt'), $text);
+        file_put_contents(public_path('post.txt'), $text);
     }
     $service= new \App\Services\XmlService();
     return $service->setContents('ping')->response();
